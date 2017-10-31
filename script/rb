@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run -it --rm \
+    --workdir=`pwd` \
+    -v $HOME:$HOME \
+    -e "HOME=$HOME" \
+    -u `id -u`:`id -g` \
+    yota/ruby \
+    /usr/bin/fish
+

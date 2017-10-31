@@ -1,0 +1,10 @@
+#!/bin/bash
+docker run -it --rm \
+    --workdir=`pwd` \
+    -v $HOME:$HOME \
+    -e "HOME=$HOME" \
+    -e "GOPATH=`pwd`" \
+    -u `id -u`:`id -g` \
+    yota/golang \
+    /usr/bin/fish
+
